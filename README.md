@@ -11,7 +11,7 @@ corpus: state, reducers, retrieval and scoring, routing, loops, LLM
 misjudgement and persistence, with deliberate mistakes checked in CI.
 
 Semester project in the module *Digital Finance: Applications and
-Technologies* (DIFA), MSc in Business Information Systems, autumn 2026.
+Technologies* (DIFA), MSc in Business Information Technology, Autumn 2026.
 
 ## Why this exists
 
