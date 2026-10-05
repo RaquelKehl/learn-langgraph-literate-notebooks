@@ -1,0 +1,8 @@
+# Versioned, deterministic responses for LLM_MODE=fake.
+# Rule: the first "match" regex (applied to the last message content) wins.
+# No match and no fallback means a hard failure: missing fixture coverage
+# should be noticed, not improvised.
+rules:
+  - match: "(?i)ping"
+    response: "pong (scripted)"
+fallback: null

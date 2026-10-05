@@ -1,0 +1,15 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Executed notebooks (CI artefacts, never committed)
+executed/
+
+# Local
+.env
+*.sqlite

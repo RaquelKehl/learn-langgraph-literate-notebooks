@@ -48,6 +48,11 @@ whether a source has been superseded. The language model writes the answer;
 it never decides which step runs next. NB 06 adds a pause for human approval
 when the evidence stays uncertain.
 
+The whole system in one animated picture (about 40 seconds, looping): who does
+each step, which way information flows, and what the shared state holds.
+
+![Animated architecture of the research assistant. A question enters Search, which collects documents from primary and secondary sources. A model reads each document and rule-based code judges the evidence against a gate. A router either writes the answer, sends the question back to a model that rewrites the query (at most three rounds), or pauses the run for a person to approve or reject. Every step is checkpointed.](docs/architecture.svg)
+
 ## The notebooks
 
 | # | Notebook | What it answers |
@@ -65,7 +70,7 @@ experiment, common mistakes, prompt log, summary and an exercise.
 
 ## The corpus
 
-Twenty short documents in six topic folders under [`data/corpus/`](data/corpus/).
+Twenty-one short documents in six topic folders under [`data/corpus/`](data/corpus/).
 Every company, person, publication and authority in them is fictional. Each
 topic hides one test case:
 
@@ -75,7 +80,7 @@ topic hides one test case:
 | b | Merger of two private banks | Sources that agree on the facts but disagree in their opinion: not a contradiction |
 | c | A new custody circular from a supervisory authority | Only one usable source, which forces the assistant to search again |
 | d | An insurer's dividend payout target | A 2023 target replaced in 2025: only the date settles it |
-| e | Fees of robo-advisory platforms | Two weak sources agree on a wrong figure because one copies the other |
+| e | Fees of robo-advisory platforms | Two weak sources agree on a wrong figure because one copies the other; the confirming source only turns up on a second, rephrased search |
 | f | Village club newsletters | Unrelated documents that share everyday words with finance questions |
 
 ## Quick start
@@ -129,9 +134,9 @@ fresh kernel and accepts only the declared exception type. Mistakes that fail
 silently, without any error, are checked with an assertion on their effect.
 Any other error fails the build.
 
-## Feedback from peer reviewers
+## Feedback
 
-Thank you for reviewing. Feedback on these points helps most:
+Feedback is welcome. It helps most on these points:
 
 1. **Concept sections:** after reading one, could you explain the idea to
    someone else?
@@ -143,6 +148,8 @@ Thank you for reviewing. Feedback on these points helps most:
 
 Please [open an issue](https://github.com/RaquelKehl/learn-langgraph-literate-notebooks/issues/new?template=notebook-feedback.md)
 with the feedback template, one issue per notebook. Short notes are fine.
+Common questions about setup, model modes and the deliberate mistakes are
+answered in the [FAQ](FAQ.md).
 
 ## Repository structure
 
@@ -152,15 +159,15 @@ notebooks/                the seven notebooks, stored without outputs
 data/corpus/              fictional finance corpus in six topic folders
 fixtures/fake_llm/        scripted model responses
 tests/                    unit tests, corpus checks and the notebook runner
-docs/                     concept, plan and architecture decision records
+docs/                     concept, architecture diagram and decision records
 .github/                  CI workflows and the feedback issue template
 ```
 
 ## Documentation
 
+- [FAQ](FAQ.md): setup, model modes, deliberate mistakes, feedback
 - [Concept](docs/CONCEPT.md): scope, research questions, notebook plan,
   error catalogue, state contract and corpus design
-- [Plan](docs/PLAN.md): milestones and dates
 - [Architecture decision records](docs/adr/)
 - [Security policy](SECURITY.md)
 

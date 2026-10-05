@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-assistant-notebooks"
+version = "0.1.0"
+description = "Consolidated core logic for the LangGraph literate-programming notebook series"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

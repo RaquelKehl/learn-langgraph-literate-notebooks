@@ -1,0 +1,19 @@
+# Scripted responses for NB 04: the search queries of rounds 2 and 3.
+# Recorded from qwen3:8b (temperature 0, reasoning off) on 5 October 2026.
+# Generated from the recording; do not edit by hand. Round 2 uses the
+# synonym prompt, round 3 the broader prompt; the naive prompt is the
+# first version shown in the prompt log.
+rules:
+- match: '^Write\ a\ new\ search\ query\ for\ the\ question\ below.*Question: What\ is\ the\ average\ annual\ fee\ of\ robo\-advisory\ platforms\ in\ Switzerland\ in\ 2025\?'
+  response: What is the typical yearly charge of automated investment services in Switzerland for 2025?
+- match: '^Write\ a\ new\ search\ query\ for\ the\ question\ below.*Question: What\ share\ of\ client\ crypto\ assets\ must\ be\ kept\ in\ cold\ storage\ under\ the\ new\ AMSA\ custody\ rules\?'
+  response: What percentage of client cryptocurrency holdings is required to be stored in offline wallets according to the updated AMSA custody regulations?
+- match: '^Write\ a\ broader\ search\ query\ about\ the\ general\ subject\ of\ the\ question\ below.*Question: What\ is\ the\ average\ annual\ fee\ of\ robo\-advisory\ platforms\ in\ Switzerland\ in\ 2025\?'
+  response: average annual fee of robo-advisory platforms in Switzerland
+- match: '^Write\ a\ broader\ search\ query\ about\ the\ general\ subject\ of\ the\ question\ below.*Question: What\ share\ of\ client\ crypto\ assets\ must\ be\ kept\ in\ cold\ storage\ under\ the\ new\ AMSA\ custody\ rules\?'
+  response: Regulatory requirements for crypto asset custody in cold storage under AMSA rules
+- match: '^Rephrase\ the\ question\ as\ a\ search\ query.*Question: What\ is\ the\ average\ annual\ fee\ of\ robo\-advisory\ platforms\ in\ Switzerland\ in\ 2025\?'
+  response: 'Search query: "Average annual fee of robo-advisory platforms in Switzerland 2025"'
+- match: '^Rephrase\ the\ question\ as\ a\ search\ query.*Question: What\ share\ of\ client\ crypto\ assets\ must\ be\ kept\ in\ cold\ storage\ under\ the\ new\ AMSA\ custody\ rules\?'
+  response: 'Search query: "What percentage of client crypto assets must be held in cold storage under the new AMSA custody regulations?"'
+fallback: null

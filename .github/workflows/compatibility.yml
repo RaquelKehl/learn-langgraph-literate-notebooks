@@ -1,0 +1,34 @@
+# Weekly compatibility CI: installs the PERMITTED (unpinned) dependencies
+# from requirements.in instead of the lockfile, as an early warning for
+# breaking changes upstream (langgraph, langchain-core).
+# A red run here does not destabilise the standard pipeline.
+name: Compatibility
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+jobs:
+  upstream:
+    runs-on: ubuntu-latest
+    env:
+      LLM_MODE: fake
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install latest permitted dependencies
+        run: |
+          pip install -r requirements.in
+          pip install -e .
+          pip freeze > /tmp/resolved.txt
+          echo "::group::Resolved versions"
+          cat /tmp/resolved.txt
+          echo "::endgroup::"
+
+      - name: Tests and notebook execution
+        run: pytest -v

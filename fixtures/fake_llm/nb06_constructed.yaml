@@ -1,0 +1,6 @@
+# Scripted response for NB 06: the claim of the openly constructed report X1.
+# Recorded from qwen3:8b (temperature 0, reasoning off) on 5 October 2026.
+rules:
+- match: '^Read the document.*Question:\ What\ revenue\ did\ Solvane\ Dynamics\ report\ for\ the\ third\ quarter\ of\ 2025\?\s+Document: Solvane\ Dynamics\ revenue\ lower\ than\ first\ reported,\ news\ wire\ says'
+  response: '{"figure": "CHF 320 million"}'
+fallback: null

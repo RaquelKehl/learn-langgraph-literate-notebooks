@@ -1,0 +1,33 @@
+# PR and push CI: must stay reliably green.
+# Lockfile-pinned dependencies, LLM_MODE=fake, pytest as the single entry
+# point: unit tests against src/ plus the notebook runner
+# (tests/test_notebooks.py), which executes every notebook on a fresh kernel
+# and checks error cells against their `expected_exception` metadata. Only the
+# declared exception type is accepted; `live-only` cells are removed.
+# The weekly compatibility CI is a separate workflow: compatibility.yml.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      LLM_MODE: fake
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies (lockfile)
+        run: |
+          pip install -r requirements.txt
+          pip install -e .
+
+      - name: Tests and notebook execution
+        run: pytest -v

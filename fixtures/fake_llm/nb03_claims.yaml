@@ -1,0 +1,54 @@
+# Scripted responses for NB 03: the figure each document states.
+# Every response was recorded from qwen3:8b (temperature 0, reasoning off)
+# on 5 October 2026. Generated from the recording; do not edit by hand.
+# Final prompt first, then the three first-version replies of the prompt log.
+rules:
+- match: '^Read the document.*Question:\ What\ revenue\ did\ Solvane\ Dynamics\ report\ for\ the\ third\ quarter\ of\ 2025\?\s+Document: Solvane\ Dynamics\ reports\ results\ for\ the\ third\ quarter\ of\ 2025'
+  response: '{"figure": "CHF 342 million"}'
+- match: '^Read the document.*Question:\ What\ revenue\ did\ Solvane\ Dynamics\ report\ for\ the\ third\ quarter\ of\ 2025\?\s+Document: Solvane\ Dynamics\ beats\ expectations\ as\ automation\ demand\ lifts\ revenue'
+  response: '{"figure": "CHF 342 million"}'
+- match: '^Read the document.*Question:\ What\ revenue\ did\ Solvane\ Dynamics\ report\ for\ the\ third\ quarter\ of\ 2025\?\s+Document: Re:\ Solvane\ Dynamics\ Q3\ numbers'
+  response: '{"figure": "CHF 310 million"}'
+- match: '^Read the document.*Question:\ What\ is\ the\ implied\ transaction\ value\ of\ the\ merger\ between\ Talvero\ Bank\ and\ Nordquist\ Privatbank\?\s+Document: Talvero\ Bank\ and\ Nordquist\ Privatbank\ agree\ to\ combine'
+  response: '{"figure": "CHF 1.2 billion"}'
+- match: '^Read the document.*Question:\ What\ is\ the\ implied\ transaction\ value\ of\ the\ merger\ between\ Talvero\ Bank\ and\ Nordquist\ Privatbank\?\s+Document: Talvero\ Bank:\ merger\ with\ Nordquist\ strengthens\ the\ franchise,\ rating\ Buy'
+  response: '{"figure": "CHF 1.2 billion"}'
+- match: '^Read the document.*Question:\ What\ is\ the\ implied\ transaction\ value\ of\ the\ merger\ between\ Talvero\ Bank\ and\ Nordquist\ Privatbank\?\s+Document: Helix\ places\ Talvero\ Bank\ on\ watch\ negative\ after\ merger\ announcement'
+  response: '{"figure": "CHF 1.2 billion"}'
+- match: '^Read the document.*Question:\ What\ share\ of\ client\ crypto\ assets\ must\ be\ kept\ in\ cold\ storage\ under\ the\ new\ AMSA\ custody\ rules\?\s+Document: AMSA\ Circular\ 2025/04:\ Custody\ of\ crypto\ assets\ held\ for\ clients'
+  response: '{"figure": "90%"}'
+- match: '^Read the document.*Question:\ What\ share\ of\ client\ crypto\ assets\ must\ be\ kept\ in\ cold\ storage\ under\ the\ new\ AMSA\ custody\ rules\?\s+Document: Regulator\ expected\ to\ tighten\ crypto\ custody\ rules'
+  response: '{"figure": null}'
+- match: '^Read the document.*Question:\ What\ share\ of\ client\ crypto\ assets\ must\ be\ kept\ in\ cold\ storage\ under\ the\ new\ AMSA\ custody\ rules\?\s+Document: What\ do\ the\ new\ AMSA\ custody\ rules\ mean\ for\ small\ brokers\?'
+  response: '{"figure": null}'
+- match: '^Read the document.*Question:\ What\ share\ of\ client\ crypto\ assets\ must\ be\ kept\ in\ cold\ storage\ under\ the\ new\ AMSA\ custody\ rules\?\s+Document: Crypto\ custody:\ why\ Swiss\ firms\ should\ prepare\ for\ stricter\ rules'
+  response: '{"figure": null}'
+- match: '^Read the document.*Question:\ What\ is\ Brunnhof\ Versicherungen''s\ current\ dividend\ payout\ target\?\s+Document: Brunnhof\ Capital\ Markets\ Day\ 2023:\ strategy\ Brunnhof\ 2026'
+  response: '{"figure": "60%"}'
+- match: '^Read the document.*Question:\ What\ is\ Brunnhof\ Versicherungen''s\ current\ dividend\ payout\ target\?\s+Document: Brunnhof:\ lower\ payout\ buys\ flexibility,\ rating\ Hold'
+  response: '{"figure": "45%"}'
+- match: '^Read the document.*Question:\ What\ is\ Brunnhof\ Versicherungen''s\ current\ dividend\ payout\ target\?\s+Document: Brunnhof\ promises\ investors\ a\ 60%\ payout'
+  response: '{"figure": "60%"}'
+- match: '^Read the document.*Question:\ What\ is\ Brunnhof\ Versicherungen''s\ current\ dividend\ payout\ target\?\s+Document: Brunnhof\ adjusts\ capital\ policy\ with\ half\-year\ results\ 2025'
+  response: '{"figure": "45%"}'
+- match: '^Read the document.*Question:\ What\ is\ the\ average\ annual\ fee\ of\ robo\-advisory\ platforms\ in\ Switzerland\ in\ 2025\?\s+Document: Robo\-Advisory\ Market\ Survey\ 2025'
+  response: '{"figure": "0.62% of assets"}'
+- match: '^Read the document.*Question:\ What\ is\ the\ average\ annual\ fee\ of\ robo\-advisory\ platforms\ in\ Switzerland\ in\ 2025\?\s+Document: Robo\-advice\ in\ Switzerland\ is\ now\ almost\ free'
+  response: '{"figure": "0.38%"}'
+- match: '^Read the document.*Question:\ What\ is\ the\ average\ annual\ fee\ of\ robo\-advisory\ platforms\ in\ Switzerland\ in\ 2025\?\s+Document: This\ week\ in\ wealth\ tech'
+  response: '{"figure": "0.38%"}'
+- match: '^Read the document.*Question:\ What\ is\ the\ average\ annual\ fee\ of\ robo\-advisory\ platforms\ in\ Switzerland\ in\ 2025\?\s+Document: Investor\ Cost\ Monitor\ 2025:\ what\ automated\ investing\ really\ costs'
+  response: '{"figure": "0.62%"}'
+- match: '^Which figure does the document give.*Question:\ What\ revenue\ did\ Solvane\ Dynamics\ report\ for\ the\ third\ quarter\ of\ 2025\?\s+Document: Solvane\ Dynamics\ reports\ results\ for\ the\ third\ quarter\ of\ 2025'
+  response: The document states that Solvane Dynamics reported **CHF 342 million** in revenue for the third quarter of 2025.
+- match: '^Which figure does the document give.*Question:\ What\ revenue\ did\ Solvane\ Dynamics\ report\ for\ the\ third\ quarter\ of\ 2025\?\s+Document: Re:\ Solvane\ Dynamics\ Q3\ numbers'
+  response: 'The document does not provide an official figure for Solvane Dynamics'' revenue for the third quarter of 2025. Instead, it expresses skepticism about the reported revenue and suggests that the actual revenue may be closer to **CHF 310 million**, not the **CHF 342 million** mentioned in the investor relations release.
+
+
+    So, the **answer to the question**, based on the document, is:
+
+
+    **CHF 310 million** (as a suggested alternative to the reported figure).'
+- match: '^Which figure does the document give.*Question:\ What\ is\ Brunnhof\ Versicherungen''s\ current\ dividend\ payout\ target\?\s+Document: Brunnhof\ adjusts\ capital\ policy\ with\ half\-year\ results\ 2025'
+  response: The document states that Brunnhof Versicherungen's current dividend payout target is **45% of net profit from financial year 2025**. This replaces the previous target of 60% set in 2023.
+fallback: null
